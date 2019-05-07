@@ -1,0 +1,53 @@
+#%RAML 1.0
+title: Calculadora Raml
+
+
+types:
+  operando: !include OperandosShema.schema
+  resultado: !include ResultadoSchema.schema
+
+/calc:
+  /add:
+    description: Representa la operación de suma
+    get:
+      queryParameters:
+        num1: integer
+        num2: integer
+      responses:
+        200:
+          body:
+            application/json:
+              type: resultado
+  /sub:
+    description: Representa la operación de resta
+    delete:
+      body:
+        application/json:
+          type: operando
+      responses:
+        200:
+          body:
+            application/json:
+              type: resultado
+  /mul:
+    description: Representa la operación de multiplicación
+    post:
+      body:
+        application/json:
+          type: operando
+      responses:
+        200:
+          body:
+            application/json:
+              type: resultado
+  /div:
+    description: Representa la operación de división
+    put:
+      queryParameters:
+        num1: integer
+        num2: integer
+      responses:
+        200:
+          body:
+            application/json:
+              type: resultado

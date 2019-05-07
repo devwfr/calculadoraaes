@@ -1,0 +1,12 @@
+com\aes\calculadora\support\ResponseDelegate$HeaderBuilderBase.class
+com\aes\calculadora\services\CalcService.class
+com\aes\calculadora\model\Operando.class
+com\aes\calculadora\support\ResponseDelegate.class
+com\aes\calculadora\services\Calc$DeleteCalcSubResponse.class
+com\aes\calculadora\services\Calc$GetCalcAddResponse.class
+com\aes\calculadora\services\Configuracion.class
+com\aes\calculadora\model\Resultado.class
+com\aes\calculadora\services\Calc$PostCalcMulResponse.class
+com\aes\calculadora\services\CalcImpl.class
+com\aes\calculadora\services\Calc.class
+com\aes\calculadora\services\Calc$PutCalcDivResponse.class
