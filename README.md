@@ -1,38 +1,66 @@
-# calculadoraaes
-Ejercicio de calculadora AES
+# CalculadorApi - AES
+Ejercicio de calculadora AES para la materia ModVad 2019
 
-# Para descargar la imagen desde dockerhub
-Pull:\
-docker pull  wilsonforerojav/calculadoramsb:v1\
-Run:\
-docker container run -p 8080:8080 -it wilsonforerojav/calculadoramsb:v1      \
+----
+  _Servicio para la suma, resta, multiplicación y división de números enteros._
 
-# Para hacer build desde los fuentes
-Ubicarse en la carpeta calculadora\
-Build:\
-docker build --tag=calculadora .      \
-Run:\
-docker container run -p 8080:8080 -it calculadora\
+## DockerHub
+### Pull:
+`docker pull  wilsonforerojav/calculadoramsb:v2`   
+### Run:
+`docker container run -p 8080:8080 -it wilsonforerojav/calculadoramsb:v2`      
 
-# Uso del servicio
-Sumar:\
-GET\
-http://localhost:8080/calculadora/calc/add?num1=34&num2=45 \
-Restar:\
-DELETE\
-http://localhost:8080/calculadora/calc/sub \
+## Código Fuente
+### En el root del folder calculadora
+#### Build:
+`docker build --tag=calculadora . `     
+#### Run:
+`docker container run -p 8080:8080 -it calculadora`   
+
+## Uso del servicio
+
+### URL
+_http://localhost:8080/calculadora/calc/_
+
+#### Sumar:
+`GET`  
+
+[ /add?num1=34&num2=45 ](http://localhost:8080/calculadora/calc/add?num1=34&num2=45)
+
+##### Required:
+ 
+   `num1=[integer]`
+   `num2=[integer]`
+
+#### Restar:
+`DELETE`
+
+[ /sub  ](http://localhost:8080/calculadora/calc/sub)
+
+```
 {
 	"num1":48,
 	"num2":43
-}\
-Multiplicar:\
-POST\
-http://localhost:8080/calculadora/calc/mul \
+}
+```
+
+#### Multiplicar:
+`POST`
+
+[ /mul  ](http://localhost:8080/calculadora/calc/mul)
+```
 {
 	"num1":48,
 	"num2":43
-}\
-Dividir:\
-PUT\
-http://localhost:8080/calculadora/calc/div?num1=432&num2=45
+}
+```
+#### Dividir:
+`PUT`
+
+[ /div?num1=432&num2=45 ](http://localhost:8080/calculadora/calc/div?num1=432&num2=45)
+
+##### Required:
+ 
+   `num1=[integer]`
+   `num2=[integer]`
 
