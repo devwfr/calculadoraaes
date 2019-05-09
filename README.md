@@ -5,7 +5,7 @@ Ejercicio de calculadora AES
 Pull:\
 docker pull  wilsonforerojav/calculadoramsb:v1\
 Run:\
-docker container run -p 8080:8080 -it wilsonforerojav/calculadoramsb:v1\
+docker container run -p 8080:8080 -it wilsonforerojav/calculadoramsb:v1      \
 
 # Para hacer build desde los fuentes
 Ubicarse en la carpeta calculadora\
